@@ -9,3 +9,6 @@ Download WebStorm-VERSION.tar.gz
 and
 clion-VERSION-tar.gz
 from the appropriate IntelliJ website.
+
+Run the NOT HERE YET script to build out a Dockerfile and build your image.
+
