@@ -1,15 +1,12 @@
 FROM ubuntu:14.04
 
-COPY WebStorm-10.0.4.tar.gz /WebStorm-10.0.4.tar.gz
-COPY clion-1.1.1.tar.gz /clion-1.1.1.tar.gz
-
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl
 #RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-RUN curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -
 RUN apt-get install -y nodejs
 
-RUN tar xvfz /WebStorm-10.0.4.tar.gz
-RUN tar xvfz /clion-1.1.1.tar.gz
+RUN mkdir /Applications
+COPY downloads/* /Applications/
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
 

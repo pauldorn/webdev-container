@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=WebStorm
+Exec=gnome-terminal --window-with-profile="" -x bash -i -c 'APPLICATION=WEBSTORM docker run -e APPLICATION=WEBSTORM -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.WebStorm10:/home/developer/.WebStorm10 -v ~/.clion11:/home/developer/.clion11 -v ~/.ssh:/ssh -v ~/workspace:/home/developer/workspace  webdev'
+Icon=USER_HOME_DIR/.dockerizedImages/webide.png
+StartupWMClass=youruser.webstorm.com__chat
+Name[en_US]=WebStorm in container

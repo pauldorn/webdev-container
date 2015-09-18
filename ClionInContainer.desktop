@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=CLion
+Exec=gnome-terminal --window-with-profile="" -x bash -i -c 'docker run -e APPLICATION=CLION -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.WebStorm10:/home/developer/.WebStorm10 -v ~/CLION_HIDDEN_DIR:/home/developer/CLION_HIDDEN_DIR -v ~/.ssh:/ssh -v ~/workspace:/home/developer/workspace  webdev'
+Icon=USER_HOME_DIR/.dockerizedImages/clion.svg
+StartupWMClass=youruser.clion.com__chat
+Name[en_US]=CLion in container
+Comment[en_US]=In container
