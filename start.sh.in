@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 
 mkdir /home/developer/.ssh
 cp -r /ssh/* /home/developer/.ssh/
@@ -17,4 +17,4 @@ if [ "$APPLICATION" = "CLION" ]; then
 /Applications/CLION_DIR/bin/clion.sh > /home/developer/clion.log 2>&1 &
 fi
 
-bash
+bash -i
