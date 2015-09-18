@@ -41,4 +41,4 @@ chmod +x ~/Desktop/tWebStormInContainer.desktop
 cat start.sh.in | sed -e "s/CLION_DIR/$CLDIR/g" | sed -e "s/WEBSTORM_DIR/$WSDIR/g" > start.sh
 chmod +x start.sh
 
-docker build -t webdev-container .
+docker build -t webdev .
