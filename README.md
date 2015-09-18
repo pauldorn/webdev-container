@@ -16,5 +16,6 @@ It automatically:
 
 Run the init.sh script to build out a Dockerfile and build your image.
 
-Once init.sh completes, you should be able to use the desktop launchers to run the IDEs
+Once init.sh completes, you should be able to use the desktop launchers to run the IDEs.
+
 This tool was developed on Ubuntu 14.04.  If you are using another desktop OS your mileage may vary.
