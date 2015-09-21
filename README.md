@@ -1,8 +1,8 @@
 # webdev-container
 Dockerized WebStorm and CLion (Requires license, not provided. 30 day trial)
 
-My teams are not allowed to install NodeJS on bare metal to force use of Docker for development.
-This tool is meant to automate building a friendly environment to run Webstorm or CLion in docker.
+My teams are not allowed to install NodeJS on bare metal to force the use of Docker for development.
+This tool is meant to automate building a friendly environment in which to run Webstorm or CLion in docker.
 
 It automatically:
 - Downloads the latest WebStorm and CLion IDEs from JetBrains
@@ -16,5 +16,6 @@ It automatically:
 
 Run the init.sh script to build out a Dockerfile and build your image.
 
-Once init.sh completes, you should be able to use the desktop launchers to run the IDEs
+Once init.sh completes, you should be able to use the desktop launchers to run the IDEs.
 
+This tool was developed on Ubuntu 14.04.  If you are using another desktop OS your mileage may vary.
