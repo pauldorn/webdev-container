@@ -10,6 +10,7 @@ export CLVER=`wget -q -O- https://www.jetbrains.com/updates/updates.xml | xmlsta
 
 export WSBUILD=`wget -q -O- https://www.jetbrains.com/updates/updates.xml | xmlstarlet sel -q -t -v //product[@name=\'WebStorm\']/channel[last\(\)-1]/build/@build -`
 export CLBUILD=`wget -q -O- https://www.jetbrains.com/updates/updates.xml | xmlstarlet sel -q -t -v //product[@name=\'CLion\']/channel[last\(\)-1]/build/@build -`
+echo "CLVER $CLVER"
 
 CLSHORTVER=( ${CLVER//./ } )
 WSSHORTVER=( ${WSVER//./ } )
@@ -18,9 +19,11 @@ CLION_HIDDEN_DIR=\.clion${CLSHORTVER[0]}${CLSHORTVER[1]}
 mkdir -p ~/$WEBSTORM_HIDDEN_DIR
 mkdir -p ~/$CLION_HIDDEN_DIR
 
+rm -Rf downloads
 mkdir downloads
 cd downloads
-wget -O- http://download-cf.jetbrains.com/cpp/clion-${CLSHORTVER[0]}.${CLSHORTVER[1]}.tar.gz | tar xz
+#wget -O- http://download-cf.jetbrains.com/cpp/clion-${CLSHORTVER[0]}.${CLSHORTVER[1]}.tar.gz | tar xz
+wget -O- http://download-cf.jetbrains.com/cpp/clion-$CLVER.tar.gz | tar xz
 wget -O- http://download-cf.jetbrains.com/webstorm/WebStorm-$WSVER.tar.gz | tar xz
 
 WSDIR=`ls|grep -i Web`
