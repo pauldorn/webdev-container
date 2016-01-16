@@ -33,7 +33,7 @@ echo "WSDIR $WSDIR"
 echo "CLDIR $CLDIR"
 
 mkdir -p ~/.dockerizedImages/
-cp $WSDIR/bin/webide.png ~/.dockerizedImages/
+cp $WSDIR/bin/webstorm.svg ~/.dockerizedImages/
 cp $CLDIR/bin/clion.svg ~/.dockerizedImages/
 cd -
 cat ClionInContainer.desktop | sed -e "s/CLION_HIDDEN_DIR/$CLION_HIDDEN_DIR/g" | sed -e "s/USER_HOME_DIR/\/home\/$USER/g" > ~/Desktop/tClionInContainer.desktop

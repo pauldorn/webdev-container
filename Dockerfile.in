@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+VOLUME /Applications
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl
 #RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -
@@ -30,6 +32,15 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y gnome-terminal
 
 RUN mkdir -p /Applications
 
+COPY cmake-3.3.2.tar.gz /cmake-3.3.2.tar.gz
+RUN tar xvfz cmake-3.3.2.tar.gz
+WORKDIR /cmake-3.3.2
+RUN ./configure
+RUN make
+RUN make install
+WORKDIR /
+RUN rm -Rf cmake-3.3.2
+RUN rm -Rf cmake-3.3.2.tar.gz
 COPY downloads/WSDIR /Applications/WSDIR
 COPY downloads/CLDIR /Applications/CLDIR
 
