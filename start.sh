@@ -11,10 +11,10 @@ echo "docker exec -it $HOSTNAME /bin/bash"
 
 echo
 if [ "$APPLICATION" = "WEBSTORM" ]; then
-/Applications/WebStorm-143.1559.5/bin/webstorm.sh > /home/developer/webstorm.log 2>&1 &
+/Applications/WebStorm-145.258.3/bin/webstorm.sh > /home/developer/webstorm.log 2>&1 &
 fi
 if [ "$APPLICATION" = "CLION" ]; then
-/Applications/clion-1.2.4/bin/clion.sh > /home/developer/clion.log 2>&1 &
+/Applications//bin/clion.sh > /home/developer/clion.log 2>&1 &
 fi
 
 bash -i

@@ -18,13 +18,31 @@ WEBSTORM_HIDDEN_DIR=\.WebStorm${WSSHORTVER[0]}
 CLION_HIDDEN_DIR=\.clion${CLSHORTVER[0]}${CLSHORTVER[1]}
 mkdir -p ~/$WEBSTORM_HIDDEN_DIR
 mkdir -p ~/$CLION_HIDDEN_DIR
+mkdir -p ~/.docker_webstorm/.WebStorm11
+mkdir -p ~/.docker_webstorm/.WebStorm10
+mkdir -p ~/.docker_webstorm/.WebStorm2016.1
+mkdir -p ~/.docker_webstorm/.java
+if [[ -e ~/.java ]]; then
+	cp -r ~/.java/* ~/.docker_webstorm/.java
+fi
+if [[ -e ~/.WebStorm10 ]]; then
+	cp -r ~/.WebStorm10/* ~/.docker_webstorm/.WebStorm10
+fi
+if [[ -e ~/.WebStorm11 ]]; then
+	cp -r ~/.WebStorm11/* ~/.docker_webstorm/.WebStorm11
+fi
+if [[ -e ~/.WebStorm2016.1 ]]; then
+	cp -r ~/.WebStorm2016.1/* ~/.docker_webstorm/.WebStorm2016.1
+fi
+
+mkdir -p ~/.docker_clion
 
 rm -Rf downloads
 mkdir downloads
 cd downloads
 #wget -O- http://download-cf.jetbrains.com/cpp/clion-${CLSHORTVER[0]}.${CLSHORTVER[1]}.tar.gz | tar xz
-wget -O- http://download-cf.jetbrains.com/cpp/clion-$CLVER.tar.gz | tar xz
-wget -O- http://download-cf.jetbrains.com/webstorm/WebStorm-$WSVER.tar.gz | tar xz
+wget -O- http://download.jetbrains.com/cpp/clion-$CLVER.tar.gz | tar xz
+wget -O- http://download.jetbrains.com/webstorm/WebStorm-$WSVER.tar.gz | tar xz
 
 WSDIR=`ls|grep -i Web`
 CLDIR=`ls|grep -i cli`
