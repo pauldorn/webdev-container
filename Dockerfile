@@ -41,8 +41,8 @@ RUN make install
 WORKDIR /
 RUN rm -Rf cmake-3.3.2
 RUN rm -Rf cmake-3.3.2.tar.gz
-COPY downloads/WebStorm-145.258.3 /Applications/WebStorm-145.258.3
-COPY downloads/ /Applications/
+COPY downloads/WebStorm-145.597.6 /Applications/WebStorm-145.597.6
+COPY downloads/clion-1.2.4 /Applications/clion-1.2.4
 
 WORKDIR /
 COPY start.sh /start.sh
